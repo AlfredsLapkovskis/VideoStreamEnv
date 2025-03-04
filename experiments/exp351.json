@@ -1,0 +1,39 @@
+{
+  "type": "A2C",
+  "slos": {
+    "max_network_usage": 10485760,
+    "min_avg_fps": 15,
+    "min_streams": 5,
+    "max_avg_render_scale_factor": 1.6,
+    "max_thermal_state": 1
+  },
+  "hparams": {
+    "batch_size": 64,
+    "learning_rate": 0.0001,
+    "discount_factor": 0.99,
+    "gae_lambda": 0.9,
+    "vf_coef": 0.75,
+    "ent_coef": 0.01,
+    "normalize_advantage": true,
+    "net_arch": {
+      "pi": [
+        128,
+        128
+      ],
+      "vf": [
+        128,
+        128
+      ]
+    },
+    "evaluate": true,
+    "total_steps": 1280000,
+    "training_steps": 6400,
+    "evaluation_steps": 640,
+    "data_batch_size": 1,
+    "model_path": "path/to/pre-trained/model"
+  },
+  "extras": {
+    "heating": true,
+    "heating_k": 0.07
+  }
+}

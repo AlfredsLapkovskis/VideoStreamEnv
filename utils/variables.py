@@ -1,0 +1,74 @@
+# Parameters
+
+VAR_P_RESOLUTION = "p_resolution"
+VAR_P_N_STREAMS = "p_n_streams"
+VAR_P_FPS = "p_fps"
+
+PARAM_LIST = [
+    VAR_P_RESOLUTION,
+    VAR_P_N_STREAMS,
+    VAR_P_FPS,
+]
+
+VALUES_P_RESOLUTION = [180, 360, 720]
+VALUES_P_N_STREAMS = [1, 2, 5, 10, 15, 20]
+VALUES_P_FPS = [5, 10, 15, 20, 25, 30]
+
+VALUES_P_SHAPE = (len(VALUES_P_RESOLUTION), len(VALUES_P_N_STREAMS), len(VALUES_P_FPS))
+
+VALUES_P_MAP = {
+    VAR_P_RESOLUTION: VALUES_P_RESOLUTION,
+    VAR_P_N_STREAMS: VALUES_P_N_STREAMS,
+    VAR_P_FPS: VALUES_P_FPS,
+}
+
+
+# Metrics
+
+
+VAR_M_CPU_USAGE = "m_cpu_usage"
+VAR_M_MEMORY_USAGE = "m_memory_usage"
+
+METRIC_LIST = [
+    VAR_M_CPU_USAGE,
+    VAR_M_MEMORY_USAGE,
+]
+
+
+# SLOs
+
+
+VAR_S_AVG_ACTUAL_FPS = "s_avg_actual_fps"
+VAR_S_NETWORK_USAGE = "s_network_usage"
+VAR_S_STREAM_FULFILLMENT = "s_stream_fulfillment"
+VAR_S_AVG_RENDER_SCALE_FACTOR = "s_avg_render_scale_factor"
+VAR_S_THERMAL_STATE = "s_thermal_state"
+
+SLO_LIST = [
+    VAR_S_AVG_ACTUAL_FPS,
+    VAR_S_NETWORK_USAGE,
+    VAR_S_STREAM_FULFILLMENT,
+    VAR_S_AVG_RENDER_SCALE_FACTOR,
+    VAR_S_THERMAL_STATE,
+]
+
+QOS_SLO_LIST = [
+    VAR_S_AVG_ACTUAL_FPS,
+    VAR_S_NETWORK_USAGE,
+    VAR_S_THERMAL_STATE,
+]
+
+QOE_SLO_LIST = [
+    VAR_S_STREAM_FULFILLMENT,
+    VAR_S_AVG_RENDER_SCALE_FACTOR,
+]
+
+
+# All Variables
+
+
+FULL_VAR_LIST = [
+    *PARAM_LIST,
+    *METRIC_LIST,
+    *SLO_LIST,
+]

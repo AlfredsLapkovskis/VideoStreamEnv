@@ -1,0 +1,9 @@
+.vscode/
+__pycache__/
+videos/
+env/
+resources/
+logs/
+config.json
+_env/
+metrics_data/

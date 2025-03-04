@@ -1,0 +1,72 @@
+{
+  "type": "AIF",
+  "slos": {
+    "max_network_usage": 256000,
+    "min_avg_fps": 30,
+    "min_streams": 20,
+    "max_avg_render_scale_factor": 0.25,
+    "max_thermal_state": 1
+  },
+  "hparams": {
+    "surprise_threshold_factor": 2.0,
+    "weight_of_past_data": 0.6,
+    "initial_additional_surprises": [
+      [
+        0,
+        0,
+        0,
+        1.0
+      ],
+      [
+        0,
+        0,
+        -1,
+        1.0
+      ],
+      [
+        0,
+        -1,
+        0,
+        1.0
+      ],
+      [
+        0,
+        -1,
+        -1,
+        1.0
+      ],
+      [
+        -1,
+        0,
+        0,
+        1.0
+      ],
+      [
+        -1,
+        0,
+        -1,
+        1.0
+      ],
+      [
+        -1,
+        -1,
+        0,
+        1.0
+      ],
+      [
+        -1,
+        -1,
+        -1,
+        1.0
+      ]
+    ],
+    "graph_max_indegree": 8,
+    "hill_climb_epsilon": 1.0,
+    "evaluate": true,
+    "total_steps": 40000,
+    "training_steps": 200,
+    "evaluation_steps": 20,
+    "data_batch_size": 32,
+    "model_path": "path/to/pre-trained/model"
+  }
+}

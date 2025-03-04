@@ -1,0 +1,31 @@
+{
+  "type": "DQN",
+  "slos": {
+    "max_network_usage": 10485760,
+    "min_avg_fps": 15,
+    "min_streams": 5,
+    "max_avg_render_scale_factor": 1.6,
+    "max_thermal_state": 1
+  },
+  "hparams": {
+    "batch_size": 128,
+    "learning_rate": 0.0001,
+    "initial_eps": 1.0,
+    "final_eps": 0.05,
+    "exploration_fraction": 0.1,
+    "net_arch": [
+      128,
+      128
+    ],
+    "discount_factor": 0.99,
+    "train_freq": 4,
+    "gradient_steps": 4,
+    "target_update_interval": 10000,
+    "evaluate": true,
+    "total_steps": 1280000,
+    "training_steps": 6400,
+    "evaluation_steps": 640,
+    "data_batch_size": 1,
+    "model_path": "path/to/pre-trained/model"
+  }
+}
